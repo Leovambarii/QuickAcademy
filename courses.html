@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> QuickAcademy </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="myimages/logo2.png"> </a>
+                <div class="nav-links" id="navLinks">
+                    <img src="myimages/cancel2.png" class="menu menu_x" onclick="hideMenu()">
+                    <ul>
+                        <li><a href="index.html">START</a></li>
+                        <li><a href="about.html">O NAS</a></li>
+                        <li><a href="courses.html">OFERTA</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+                <img src="myimages/menu2.png" class="menu" onclick="showMenu()">
+            </nav>
+            <h1>Najlepsze kursy</h1>
+            <p>Osiągaj swoje cele!</p>
+        </section>
+        <!-- ----Courses page---- -->
+        <section class="courses">
+            <h1>Nasza oferta</h1>
+            <p class="space">Posiadamy szeroką ofertę idywidualnych oraz grupowych zajęć online dla dzieci i dorosłych na każdym poziomie. Z naszą pomocą przygotujesz się do testów, egzaminów oraz certyfikatów.
+                <br><br><b>Z nami osiągniesz swoje cele!</b></p>
+            <div class="courses-page">
+                <div class="courses-list">
+                    <h2>KURSY</h2>
+                    <ul>
+                        <a href="#language_courses"><li>&#10539; JĘZYKI &#10540;</li></a>
+                        <a href="#science_courses"><li>&#10539; PRZEDMIOTY ŚCISŁE &#10540;</li></a>
+                        <a href="#programming_courses"><li>&#10539; PROGRAMOWANIE &#10540;</li></a>
+                        <a href="#art_courses"><li>&#10539; SZTUKA &#10540;</li></a>
+                    </ul>
+                </div>
+                <div class="course" id="language_courses">
+                    <h3><span>&#x269E; JĘZYKI &#x269F;</span></h3>
+                    <p>Phasellus gravida commodo tempus. Quisque sed sapien ac dolor porttitor sodales. Fusce scelerisque eros quis metus aliquam volutpat. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                    <p>Phasellus gravida commodo tempus. Fusce scelerisque eros quis metus aliquam volutpat. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                </div>
+                <div class="course" id="science_courses">
+                    <h3><span>&#x269E; PRZEDMIOTY ŚCISŁE &#x269F;</span></h3>
+                    <p>Phasellus gravida commodo tempus. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                    <p>Phasellus gravida commodo tempus. Fusce scelerisque eros quis metus aliquam volutpat. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                </div>
+                <div class="course" id="programming_courses">
+                    <h3><span>&#x269E; PROGRAMOWANIE &#x269F;</span></h3>
+                    <p>Phasellus gravida commodo tempus. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                    <p>Phasellus gravida commodo tempus. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                    <p>Phasellus gravida commodo tempus. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                </div>
+                <div class="course" id="art_courses">
+                    <h3><span>&#x269E; SZTUKA &#x269F;</span></h3>
+                    <p>Phasellus gravida commodo tempus. Sed ac mauris quis nibh rhoncus consequat. Vestibulum non sapien ligula. Praesent ac metus at velit mollis eleifend. Fusce id imperdiet diam, in vehicula elit.</p>
+                </div>
+            </div>
+        </section>
+        <!-- ----Footer---- -->
+        <section class="footer">
+            <h4>QuickAcademy</h4>
+            <p><b>Copyrights &copy; 2022 QuickAcademy&trade;</b></p>
+            <div class="icons">
+                <img src="myimages/facebook.png">
+                <img src="myimages/twitter.png">
+                <img src="myimages/instagram.png">
+            </div>
+            <p>Created by Jakub Ostrowski</i></p>
+        </section>
+        <div id="progress">
+            <span id="progress-value">&#x1F815;</span>
+        </div>
+        <!-- Menu Toggle JS -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right= "-150px";
+            }
+            window.addEventListener("resize", () => {
+                if(window.innerWidth > 700)
+                    navLinks.style.right = "-150px";
+                });
+        </script>
+        <!-- ScroolUpButton JS -->
+        <script>
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let progressValue = document.getElementById("progress-value");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100) / calcHeight);
+                if (pos > 500) {
+                  scrollProgress.style.display = "grid";
+                } else {
+                  scrollProgress.style.display = "none";
+                }
+                scrollProgress.addEventListener("click", () => { document.documentElement.scrollTop = 0; });
+                scrollProgress.style.background = `conic-gradient(#a74a92 ${scrollValue}%, #fff ${scrollValue}%)`;
+              };
+              window.onscroll = calcScrollValue;
+              window.onload = calcScrollValue;
+        </script>
+    </div>
+</body>
+</html>
